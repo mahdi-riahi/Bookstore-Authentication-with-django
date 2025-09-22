@@ -25,16 +25,29 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+            <a class="nav-link" href="{% url 'home' %}" style="{% if active_page == 'home' %}font-weight: bold;{% endif %}">
+                Home
+            </a>
         </li>
         <li class="nav-item">
-          <b><a class="nav-link" href="#">Store</a></b>
+          <a class="nav-link" href="#"> <!--style="{% if active_page == 'home' %}font-weight: bold;{% endif %}">-->
+                Store
+            </a>
+        </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#"> <!--style="{% if active_page == 'home' %}font-weight: bold;{% endif %}">-->
+                Blog
+            </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'about' %}">About Us</a>
+            <a class="nav-link" href="{% url 'about' %}" style="{% if active_page == 'about' %}font-weight: bold;{% endif %}">
+                About Us
+            </a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+              <a class="nav-link" href="{% url 'contact' %}" style="{% if active_page == 'contact' %}font-weight: bold;{% endif %}">
+                Contact Us
+            </a>
         </li>
       </ul>
       <span class="navbar-text">

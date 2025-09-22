@@ -1,8 +1,9 @@
 from django.views import generic
-from django.contrib.auth.forms import UserCreationForm
+
+from .forms import CustomUserCreationForm
 
 
 class SignUpView(generic.CreateView):
     template_name = 'registration/signup.html'
-    form_class = UserCreationForm
+    form_class = CustomUserCreationForm
     success_url = 'home'

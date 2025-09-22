@@ -8,7 +8,7 @@ from .forms import CustomUserCreationForm, CustomUserChangeForm
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
     model = CustomUser
-    list_display = ('nat_id', 'username', 'email', )
+    list_display = ('nat_id', 'username', 'email', 'last_login', )
     ordering = ('-last_login', )
     form = CustomUserChangeForm
     add_form = CustomUserCreationForm

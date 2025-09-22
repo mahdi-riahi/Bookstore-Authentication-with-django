@@ -3,6 +3,14 @@
 {% block title %}Sign Up{% endblock %}
 {% block content %}
 
+    {% if user.is_authenticated %}
+        <div class="card text-center col-6" style="margin: 0 auto 0">
+            <div class="card-body">
+                <h3>You have logged in!</h3>
+                <p>If you want to create a new account, first log out from this account</p>
+            </div>
+        </div>
+    {% else %}
     <div class="card text-center col-6" style="margin: 0 auto 0">
         <div class="card-header">
             <h2>Sign Up Form</h2>
@@ -23,4 +31,5 @@
     </div>
     <br>
     <br>
+    {% endif %}
 {% endblock %}

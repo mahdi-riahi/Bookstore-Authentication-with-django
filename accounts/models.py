@@ -28,3 +28,6 @@ class CustomUser(AbstractUser):
             'unique': 'This ID has been signup before'
         }
     )
+
+    def __str__(self):
+        return self.nat_id
